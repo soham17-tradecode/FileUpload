@@ -1,8 +1,6 @@
 package com.File.Distribution.FileSharing.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Data;
 
 @Data
@@ -10,11 +8,13 @@ import lombok.Data;
 @Table(name = "register")
 public class userRegister {
     @Id
-    int i;
-    String name;
-    String email;
-    String password;
-    String cpassword;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private  Integer i;
+    @Column(unique = true)
+    private String name;
+    private String email;
+    private String password;
+    private String cpassword;
 
 
 }

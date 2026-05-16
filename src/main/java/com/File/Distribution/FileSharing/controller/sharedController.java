@@ -57,7 +57,7 @@ public class sharedController {
 
 
     @GetMapping("/shared")
-    public List<fileData> sharedEntityList(Principal pr)
+    public List<String> sharedEntityList(Principal pr)
     {
         List<sharedEntity> sharedEntity = sharedRepo.findBySharedWith(pr.getName());
         List<fileData> fileData = new ArrayList<>();
@@ -65,7 +65,10 @@ public class sharedController {
         {
             fileDataRepo.findById(sharedEntity1.getFieldId()).ifPresent(fileData::add);
         }
-        return fileData;
+        return fileData.stream()
+                .map(fileData1->fileData1.getFilename())
+                .toList();//this will only return filename---->
+
     }
 
 }

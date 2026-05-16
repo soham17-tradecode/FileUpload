@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.File.Distribution</groupId>
-	<artifactId>FileSharing</artifactId>
+	<artifactId>FileUpload</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name/>
 	<description/>

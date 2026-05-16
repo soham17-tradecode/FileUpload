@@ -3,16 +3,16 @@ package com.File.Distribution.FileSharing.model;
 import jakarta.persistence.*;
 import lombok.Data;
 
-@Data
 @Entity
-@Table (name = "file")
-public class fileData {
+@Data
+@Table (name = "shared")
+public class sharedEntity
+{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    private String uploadBy;
-    private String filename;
-    private String filepath;
-    private long filesize;
+    private int fieldId;
+    private String owner;
+    private String sharedWith;
 
 }

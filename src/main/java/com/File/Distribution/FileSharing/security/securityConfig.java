@@ -40,6 +40,8 @@ public class securityConfig {
         return new BCryptPasswordEncoder();
     }
 
+    //for custom username and password from db this method is used for authentication in basic auth-->
+    //and also custom userdetailservice is required--->
     @Bean
     public AuthenticationProvider provider()
     {

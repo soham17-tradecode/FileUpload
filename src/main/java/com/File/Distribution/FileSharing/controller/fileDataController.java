@@ -107,7 +107,7 @@ public class fileDataController {
        return "deleted";
     }
     //search the file by name
-    @GetMapping("{name}")
+    @GetMapping("/all/{name}")
     public List<String> getFiles(@PathVariable String name)
     {
         List< fileData> l1 = fileDataRepo.findByuploadBy(name);
